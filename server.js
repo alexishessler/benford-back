@@ -3,12 +3,15 @@ import path from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
 import colors from 'colors';
+import cors from 'cors';
 import router from './router/index.js';
 import { notFound, errorHandler } from './middlewares/errorMiddleware.js';
 
 dotenv.config();
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
