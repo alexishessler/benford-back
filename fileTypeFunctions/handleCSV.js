@@ -11,7 +11,7 @@ export const handleCSV = (req, res, cb) => {
     let dataSet = [];
     let { columnname, separator } = req.body;
 
-    fs.createReadStream(`backend/uploads/${req.file.filename}`)
+    fs.createReadStream(`uploads/${req.file.filename}`)
         .pipe(csv({ separator }))
         .on('data', (data) => results.push(data))
         .on('end', () => {
