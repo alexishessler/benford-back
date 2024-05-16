@@ -21,10 +21,10 @@ export const calculateBenford = data => {
     const firstDigitFrequencies = getDigitsFrequencies(firstDigits);
 
     let dataFrequency,
-    dataFrequencyPercent;
-    BenfordFrequency;
-    BenfordFrequencyPercent;
-    differenceFrequency;
+    dataFrequencyPercent,
+    BenfordFrequency,
+    BenfordFrequencyPercent,
+    differenceFrequency,
     differenceFrequencyPercent;
 
     for (let n = 1; n <= 9; n++) {
